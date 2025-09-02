@@ -1,0 +1,181 @@
+Challenge 1 : Table de Multiplication
+
+#include <stdio.h>
+
+int main() {
+    int n, i;
+
+    printf("Entrez un nombre : ");
+    scanf("%d", &n);
+
+    printf("Table de multiplication de %d :\n", n);
+
+    for(i = 1; i <= 10; i++) {
+        printf("%d * %d = %d\n", n, i, n * i);
+    }
+
+    return 0;
+}
+
+########################################
+Challenge 2 : Factorielle d'un Nombre
+
+#include <stdio.h>
+
+int main() {
+    
+   int x , i , f = 1;
+   
+   printf("entrer un entier : \n");
+   scanf("%d",&x);
+   
+   for (i = 1; i <= x;i++) {
+       
+       f *= i;
+   }
+   
+   printf("le factoriel de %d est egale : %d",x,f);
+
+    return 0;
+}
+
+##################################
+Challenge 3 : Somme des N Nombres
+
+#include <stdio.h>
+
+int main() {
+    
+   int x , i , s = 0;
+   
+   printf("entrer un entier : \n");
+   scanf("%d",&x);
+   
+   for (i = 1; i <= x;i++) {
+       
+       s += i;
+   }
+   
+   printf("le somme des %d premier nombres naturels est : %d",x,s);
+
+    return 0;
+}
+ #################################
+Challenge 4 : Affichage des N Premiers Nombres Impairs
+
+#include <stdio.h>
+
+int main() {
+    int x, i = 1, cnt = 0;
+
+    printf("Entrer un entier : \n");
+    scanf("%d", &x);
+
+    printf("Les %d premiers nombres impairs sont :\n", x);
+
+    while(cnt < x) {
+        if(i % 2 != 0) {
+            printf("%d\n", i);
+            cnt++;
+        }
+        i++;
+    }
+
+    return 0;
+}
+
+
+ #################################
+Challenge 5 : calcul de la puissance
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    
+   int x , y ,p;
+    
+    printf("entrer le premier entier : \n");
+    scanf("%d",&x);
+    printf("entrer le deuxieme entier : \n");
+    scanf("%d",&y);
+    
+    p = pow(x,y);
+    
+    printf("la puissance de %d par %d est : %d",x,y,p);
+    
+    return 0;
+}
+
+ #################################
+Challenge 6 : Affichage des N Premiers Nombres pairs
+
+#include <stdio.h>
+
+int main() {
+    int x, i = 1, cnt = 0;
+
+    printf("Entrer un entier : \n");
+    scanf("%d", &x);
+
+    printf("Les %d premiers nombres pairs sont :\n", x);
+
+    while(cnt < x) {
+        if(i % 2 == 0) {
+            printf("%d\n", i);
+            cnt++;
+        }
+        i++;
+    }
+
+    return 0;
+}
+
+
+###################################
+Challenge 7 : Inversion d'un Entier
+
+#include <stdio.h>
+
+int main() {
+    
+   int x , i , inv = 0;
+   
+   printf("entrer un entier : \n");
+   scanf("%d",&x);
+   
+   do {
+       i = x % 10;
+       inv = inv * 10 + i;
+       x = x / 10;
+   } while (x != 0);
+
+   printf("l'inverse de %d est : %d",x,inv);
+
+    return 0;
+}
+
+############################
+Challenge 9 : Compteur de Chiffres
+
+#include <stdio.h>
+
+int main() {
+    
+   int x ,org, i , cnt = 0;
+   
+   printf("entrer un entier : \n");
+   scanf("%d",&x);
+   
+   org = x;
+   
+   do {
+       i = x % 10;
+       x = x / 10;
+       cnt++;
+   } while (x != 0);
+
+   printf("le nombre des chiffres de %d est : %d",org,cnt);
+
+    return 0;
+}
