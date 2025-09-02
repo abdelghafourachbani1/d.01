@@ -1,1 +1,137 @@
 
+### Challenge 1 : Paire ou Impaire
+
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Entrez un nombre : ");
+    scanf("%d", &n);
+
+    if (nombre % 2 == 0) {
+        printf("Le nombre %d est pair.\n", n);
+    } else {
+        printf("Le nombre %d est impair.\n", n);
+    }
+
+    return 0;
+}
+
+####################################
+### Challenge 2 : Voyelle ou Non
+
+#include <stdio.h>
+
+int main() {
+    char x;
+
+    printf("Entrez un alphabet : ");
+    scanf(" %c", &x);  
+
+    switch(x) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'A':
+        case 'E':
+        case 'I':
+        case 'O':
+        case 'U':
+            printf("'%c' est une voyelle.\n", x);
+            break;
+        default:
+            printf("'%c' n'est pas une voyelle.\n", x);
+            break;
+    }
+
+    return 0;
+}
+
+
+#####################################
+### Challenge 3 : Somme de Deux Valeurs
+
+#include <stdio.h>
+
+int main() {
+    int a, b, s;
+
+    printf("Entrez le premier entier : ");
+    scanf("%d", &a);
+    printf("Entrez le deuxième entier : ");
+    scanf("%d", &b);
+
+    if (a == b) {
+        s = 3 * (a + b);  
+    } else {
+        s = a + b;         
+    }
+
+    printf("Le résultat est : %d\n", s);
+
+    return 0;
+}
+
+
+######################################
+### Challenge 4 : Equation du Deuxième Degré
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float a, b, c, d, x1, x2;
+
+    printf("Entrez le coefficient a : ");
+    scanf("%f", &a);
+    printf("Entrez le coefficient b : ");
+    scanf("%f", &b);
+    printf("Entrez le coefficient c : ");
+    scanf("%f", &c);
+
+
+   
+    delta = b*b - 4*a*c;
+
+    if(delta < 0){
+        printf("L'équation n'a pas de solution réelle.\n");
+    } else if(delta == 0){
+        x1 = -b / (2*a);
+        printf("L'équation a une solution unique : x = %.2f\n", x1);
+    } else {
+        x1 = (-b - sqrt(delta)) / (2*a);
+        x2 = (-b + sqrt(delta)) / (2*a);
+        printf("L'équation a deux solutions réelles : x1 = %.2f , x2 = %.2f\n", x1, x2);
+    }
+
+    return 0;
+}
+
+###################################
+Challenge 6 : Positif, Négatif ou Nul
+
+#include <stdio.h>
+
+int main() {
+    float n;
+
+    printf("Entrez un nombre : ");
+    scanf("%f", &n);
+
+    if (nombre > 0) {
+        printf("Le nombre %.2f est positif.\n", n);
+    } else if (nombre < 0) {
+        printf("Le nombre %.2f est negatif.\n", n);
+    } else {
+        printf("Le nombre est nul.\n");
+    }
+
+    return 0;
+}
+
+###################################
+
+
