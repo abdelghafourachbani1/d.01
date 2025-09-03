@@ -137,5 +137,148 @@ int main() {
 }
 
 ###########################################
+Challenge 9 : Inversion d'un Tableau
+
+#include <stdio.h>
+
+int main() {
+   
+     int n, i;
+
+    printf("Nombre d'elements : ");
+    scanf("%d", &n);
+    int tableau[n];
+    int t_inv[n];
+
+    for(i = 0; i < n; i++){
+        printf("Element %d : ", i+1);
+        scanf("%d", &tableau[i]);
+    }
+    
+    printf("les elements du tableauen sense inverse :");
+    
+    for (i = 0;i < n;i++){
+        t_inv[n-i] = tableau[i];
+        printf("%d : \n");
+    }
+    
+    return 0;
+}
+
+###########################################
+Challenge 10 : Rechercher un Élément
+
+#include <stdio.h>
+
+int main() {
+   
+     int n, i,x,trv = 0;
+
+    printf("Nombre d'elements : ");
+    scanf("%d", &n);
+    int tableau[n];
+    int t_inv[n];
+
+    for(i = 0; i < n; i++){
+        printf("Element %d : ", i+1);
+        scanf("%d", &tableau[i]);
+    }
+    
+    printf("entrer l'element qui vous cherchez : \n");
+    scanf("%d",&x);
+    
+     for (i = 0;i < n;i++){
+        if (tableau[i] == x) {
+            trv++;
+            break;
+        }
+    }
+      
+    if (trv == 0){
+        printf("l'elemnet n'exist pas");
+    }  else {
+        printf("l'elemnet exist dans le tableau ");
+    }
+    
+    return 0;
+}
+
+###############################################
+chalenge 13: afficher les elements pairs 
+ #include <stdio.h>
+
+int main() {
+    int n, i;
+
+    printf("Nombre d'elements : ");
+    scanf("%d", &n);
+    int tableau[n];
+
+    for(i = 0; i < n; i++){
+        printf("Element %d : ", i+1);
+        scanf("%d", &tableau[i]);
+    }
+
+    printf("Elements pairs : ");
+    for(i = 0; i < n; i++){
+        if(tableau[i] % 2 == 0) printf("%d ", tableau[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+###############################################
+chalenge 14: afficher les elements impairs 
+#include <stdio.h>
+
+int main() {
+    int n, i;
+
+    printf("Nombre d'elements : ");
+    scanf("%d", &n);
+    int tableau[n];
+
+    for(i = 0; i < n; i++){
+        printf("Element %d : ", i+1);
+        scanf("%d", &tableau[i]);
+    }
+
+    printf("Elements impairs : ");
+    for(i = 0; i < n; i++){
+        if(tableau[i] % 2 != 0) printf("%d ", tableau[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+###############################################
+chalenge 15:la moyenne
+
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float somme = 0;
+
+    printf("Nombre d'elements : ");
+    scanf("%d", &n);
+    int tableau[n];
+
+    for(i = 0; i < n; i++){
+        printf("Element %d : ", i+1);
+        scanf("%d", &tableau[i]);
+        somme += tableau[i];
+    }
+
+    printf("Moyenne : %.2f\n", somme/n);
+
+    return 0;
+}
+
+
+
 
 
