@@ -1,15 +1,16 @@
 #include <stdio.h>
+#include <string.h>
 
 int main (){
     int j ,x ,i = 0;
-    char livre_chrch[15];
-    int nvl_qnt[15];
+    char livre_chrch[20];
+    int nvl_qnt;
     
     char titre_livre[100][20];
-    char auteur_livre[100];
+    char auteur_livre[100][20];
     int prix_livre[100];
     int quantite_livre[100];
-    
+
     printf("########  Menu  ############\n");
     printf("1 => Ajouter un livre au stock. \n");
     printf("2 => Afficher tous les livres disponibles.\n");
@@ -21,40 +22,73 @@ int main (){
     
     switch (x) {
         case 1 : 
-               printf("entrer le titre du livre : ");
-               scanf("%s\n",&titre_livre[i]);
-               printf("entrer l'auteur du livre : ");
-               scanf("%s\n",&auteur_livre[i]);
-               printf("entrer le prix du livre : ");
-               scanf("%f \n",&prix_livre[i]);
-               printf("entrer la quantite du livre : ");
-               scanf("%d\n",&quantite_livre[i]);
+            printf("Entrer le titre du livre : ");
+            scanf("%s",titre_livre[i]);
+            printf("Entrer l'auteur du livre : ");
+            scanf("%s",auteur_livre[i]);
+            printf("Entrer le prix du livre : ");
+            scanf("%d",&prix_livre[i]);
+            printf("Entrer la quantite du livre : ");
+            scanf("%d",&quantite_livre[i]);
                
-               i += 1;
-               break;
+            i += 1;
+        break;
         
         case 2 :
-              for(j = 0;j < i;j++){
-                  printf("le nom de livre %s || l'auteur de livre %s || le prix de livre %d || la quantite de livre %d \n",titre_livre[j],auteur_livre[j],prix_livre[j],quantite_livre[j]);
-              }
-             break;
-        case 3 :
+            if(i == 0){
+                printf("Aucune livre disponible.\n");
+            } else {
+                for(j = 0;j < i;j++){
+                    printf("Titre: %s || Auteur: %s || Prix: %d || Quantite: %d\n",
+                           titre_livre[j], auteur_livre[j], prix_livre[j], quantite_livre[j]);
+                }
+            }
+        break;
              
-             ptintf("entrer le livre qui vous cherchez ");
-             scanf("%s",livre_chrch);
-             printf("entre la nouvelle quantité.");
-             scanf("%d",nvl_qnt);
+        case 3 : 
+            printf("Entrer le livre que vous cherchez : ");
+            scanf("%s",livre_chrch);
+            
+            int trouve = 0;
+            for (j = 0;j < i;j++){
+                if (strcmp(livre_chrch, titre_livre[j]) == 0){
+                    printf("Le livre existe dans la librairie.\n");
+                    trouve = 1;
+                    break;
+                }
+            }
+            if(trouve == 0) printf("Le livre n'existe pas.\n");
+        break;
+            
+        case 4 :
+            printf("Entrer le livre que vous cherchez : ");
+            scanf("%s",livre_chrch);
+            printf("Entrer la nouvelle quantite : ");
+            scanf("%d",&nvl_qnt);
              
-             for (j = 0;j < i;j++){
-                 if (livre_chrch == titre_livre[j]){
-                     quantite_livre[i] = nvl_qnt;
-                     break;
-                 }
-             }
-             printf("le livre n'exist pas dans l")
-             break;  
-        default : printf("le nombre n'exist pas dans le menu.");
-               
+            trouve = 0;
+            for (j = 0;j < i;j++){
+                if (strcmp(livre_chrch, titre_livre[j]) == 0){
+                    quantite_livre[j] = nvl_qnt;
+                    printf("Quantite mise a jour avec succes.\n");
+                    trouve = 1;
+                    break;
+                }
+            }
+            if(trouve == 0) printf("Impossible de modifier, le livre n'existe pas.\n");
+        break;  
+             
+        case 6 :
+            if (i == 0){
+                printf("La librairie est vide.\n");
+            } else {
+                printf("Le nombre total de livres dans le stock est : %d\n",i);
+            }
+        break;
+        
+        default : 
+            printf("Le nombre n'existe pas dans le menu.\n"); 
+        break;
     };
     
     return 0;
