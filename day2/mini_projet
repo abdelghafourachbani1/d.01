@@ -1,1 +1,61 @@
+#include <stdio.h>
 
+int main (){
+    int j ,x ,i = 0;
+    char livre_chrch[15];
+    int nvl_qnt[15];
+    
+    char titre_livre[100][20];
+    char auteur_livre[100];
+    int prix_livre[100];
+    int quantite_livre[100];
+    
+    printf("########  Menu  ############\n");
+    printf("1 => Ajouter un livre au stock. \n");
+    printf("2 => Afficher tous les livres disponibles.\n");
+    printf("3 => Rechercher un livre par son titre.\n");
+    printf("4 => Mettre à jour la quantité d'un livre.\n");
+    printf("5 => Supprimer un livre du stock.\n");
+    printf("6 => Afficher le nombre total de livres en stock.\n");
+    scanf("%d",&x);
+    
+    switch (x) {
+        case 1 : 
+               printf("entrer le titre du livre : ");
+               scanf("%s\n",&titre_livre[i]);
+               printf("entrer l'auteur du livre : ");
+               scanf("%s\n",&auteur_livre[i]);
+               printf("entrer le prix du livre : ");
+               scanf("%f \n",&prix_livre[i]);
+               printf("entrer la quantite du livre : ");
+               scanf("%d\n",&quantite_livre[i]);
+               
+               i += 1;
+               break;
+        
+        case 2 :
+              for(j = 0;j < i;j++){
+                  printf("le nom de livre %s || l'auteur de livre %s || le prix de livre %d || la quantite de livre %d \n",titre_livre[j],auteur_livre[j],prix_livre[j],quantite_livre[j]);
+              }
+             break;
+        case 3 :
+             
+             ptintf("entrer le livre qui vous cherchez ");
+             scanf("%s",livre_chrch);
+             printf("entre la nouvelle quantité.");
+             scanf("%d",nvl_qnt);
+             
+             for (j = 0;j < i;j++){
+                 if (livre_chrch == titre_livre[j]){
+                     quantite_livre[i] = nvl_qnt;
+                     break;
+                 }
+             }
+             printf("le livre n'exist pas dans l")
+             break;  
+        default : printf("le nombre n'exist pas dans le menu.");
+               
+    };
+    
+    return 0;
+}
