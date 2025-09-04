@@ -5,11 +5,14 @@ int main (){
     int h ,j ,x ,i = 0;
     char livre_chrch[20];
     int nvl_qnt;
+    int rp ;
     
     char titre_livre[100][20];
     char auteur_livre[100][20];
     int prix_livre[100];
     int quantite_livre[100];
+
+do {
 
     printf("########  Menu  ############\n");
     printf("1 => Ajouter un livre au stock. \n");
@@ -108,6 +111,9 @@ int main (){
             printf("Le nombre n'existe pas dans le menu.\n"); 
         break;
     };
-    
+printf("show menu print 1 , if you don't print 0");
+scanf("%d",rp);
+    } while (rp ==1);
+
     return 0;
 }
