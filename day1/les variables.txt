@@ -10,10 +10,10 @@ int main() {
     char s[10];
     char email[100];
     
-    printf("Entrer votre nom : ");
+    printf("Entrer votre nom : \n");
     scanf("%s",n);
 
-    printf("Entrer votre prenom : ");
+    printf("Entrer votre prenom : \n");
     scanf("%s",p);
 
     printf("Entrer votre age : ");
@@ -25,7 +25,7 @@ int main() {
     printf("Entrer votre adresse email : ");
     scanf("%s",email);
     
-    printf("\n--- Vos informations personnelles ---\n");
+    printf("\n--- Votre informations personnelles ---\n");
     
     printf("nom  : %s\n",nom);
     printf("prenom : %s\n",prenom);
@@ -47,7 +47,7 @@ int main() {
     float c, k;
 
     printf("entrer la temperature en Celsius : ");
-    scanf("%f", &c);
+    scanf("%f",&c);
 
     K = C + 273.15;
 
@@ -66,7 +66,7 @@ Challenge 3 : Conversion de la distance
 int main() {
     float km, y;
 
-    printf("entrer la distance en kilometres : ");
+    printf("entrer la distance en kilometre : ");
     scanf("%f", &km);
 
     y = km * 1093.61;
@@ -128,11 +128,11 @@ Challenge 6 : Calcul et affichage des résultats
 int main() {
     float a, b;
 
-    printf("Entrer le premier nombre reel : ");
-    scanf("%f", &a);
+    printf("Entrer lpremier valeur : ");
+    scanf("%f",&a);
 
-    printf("Entrer le deuxieme nombre reel : ");
-    scanf("%f", &b);
+    printf("Entrer la deuxiemr valeur : ");
+    scanf("%f",&b);
 
     printf("a + b = %.2f\n", a + b);
     printf("a - b = %.2f\n", a - b);
@@ -156,9 +156,9 @@ int main() {
     float a, b, c, m;
 
     printf("Entrer le premier nombre : ");
-    scanf("%f", &a);
+    scanf("%f",&a);
 
-    printf("Entrer le deuxieme nombre : ");
+    printf("Entrer la deuxieme nombre : ");
     scanf("%f", &b);
 
     printf("Entrer le troisieme nombre : ");
@@ -228,12 +228,13 @@ Challenge 10 : Volume d'une sphère
 #include <math.h>  
 
 int main() {
-    float r, v;
+    float r, v ,p = 3.14;
+    
 
-    printf("Entrer le rayon de la sphere : ");
+    printf("Entrer le rayon du a sphere : ");
     scanf("%f", &r);
 
-    v = (4.0 / 3.0) * M_PI * pow(r, 3);
+    v = (4/3) * 3.14 * pow(r, 3);
 
     printf("Le volume de la sphere est : %.2f\n", v);
 
@@ -255,9 +256,9 @@ int main() {
     printf("Entrer la largeur du rectangle : ");
     scanf("%f", &lrg);
 
-    surface = longueur * largeur;
+    s = lg * lrg;
 
-    printf("La surface du rectangle est : %.2f\n", surface);
+    printf("La surface du rectangle est : %.2f\n", s);
 
     return 0;
 }
