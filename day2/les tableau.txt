@@ -112,24 +112,24 @@ chalenge 6 : le multiplicationdu tableau par une facteur
 #include <stdio.h>
 
 int main() {
-    int n, i, facteur;
+    int n, i, fct;
 
     printf("Nombre d'elements : ");
     scanf("%d", &n);
-    int tableau[n];
+    int t[n];
 
     for(i = 0; i < n; i++){
         printf("Element %d : ", i+1);
-        scanf("%d", &tableau[i]);
+        scanf("%d", &t[i]);
     }
 
     printf("Entrez le facteur de multiplication : ");
-    scanf("%d", &facteur);
+    scanf("%d", &fct);
 
     printf("Tableau multiplie : ");
     for(i = 0; i < n; i++){
-        tableau[i] *= facteur;
-        printf("%d ", tableau[i]);
+        t[i] *= fct;
+        printf("%d ", t[i]);
     }
     printf("\n");
 
@@ -147,18 +147,18 @@ int main() {
 
     printf("Nombre d'elements : ");
     scanf("%d", &n);
-    int tableau[n];
+    int t[n];
     int t_inv[n];
 
     for(i = 0; i < n; i++){
         printf("Element %d : ", i+1);
-        scanf("%d", &tableau[i]);
+        scanf("%d", &t[i]);
     }
     
     printf("les elements du tableauen sense inverse :");
     
     for (i = 0;i < n;i++){
-        t_inv[n-i] = tableau[i];
+        t_inv[n-i] = t[i];
         printf("%d : \n");
     }
     
@@ -176,19 +176,18 @@ int main() {
 
     printf("Nombre d'elements : ");
     scanf("%d", &n);
-    int tableau[n];
-    int t_inv[n];
+    int t[n];
 
     for(i = 0; i < n; i++){
         printf("Element %d : ", i+1);
-        scanf("%d", &tableau[i]);
+        scanf("%d", &t[i]);
     }
     
     printf("entrer l'element qui vous cherchez : \n");
     scanf("%d",&x);
     
      for (i = 0;i < n;i++){
-        if (tableau[i] == x) {
+        if (t[i] == x) {
             trv++;
             break;
         }
@@ -212,16 +211,16 @@ int main() {
 
     printf("Nombre d'elements : ");
     scanf("%d", &n);
-    int tableau[n];
+    int t[n];
 
     for(i = 0; i < n; i++){
         printf("Element %d : ", i+1);
-        scanf("%d", &tableau[i]);
+        scanf("%d", &t[i]);
     }
 
     printf("Elements pairs : ");
     for(i = 0; i < n; i++){
-        if(tableau[i] % 2 == 0) printf("%d ", tableau[i]);
+        if(t[i] % 2 == 0) printf("%d ", t[i]);
     }
     printf("\n");
 
@@ -260,23 +259,23 @@ chalenge 15:la moyenne
 #include <stdio.h>
 
 int main() {
-    int n, i;
-    float somme = 0;
+    int n, i,s=0;
 
     printf("Nombre d'elements : ");
     scanf("%d", &n);
-    int tableau[n];
+    int t[n];
 
     for(i = 0; i < n; i++){
         printf("Element %d : ", i+1);
-        scanf("%d", &tableau[i]);
-        somme += tableau[i];
+        scanf("%d", &t[i]);
+        s += t[i];
     }
 
-    printf("Moyenne : %.2f\n", somme/n);
+    printf("Moyenne : %.2f\n", s/n);
 
     return 0;
 }
+
 
 
 
