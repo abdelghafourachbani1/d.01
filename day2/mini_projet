@@ -91,6 +91,7 @@ int main (){
                            quantite_livre[j] = quantite_livre[h+1];
                 }
                 i--;
+                printf("le livre a etait suprime .");
                 }
             }
         break;
