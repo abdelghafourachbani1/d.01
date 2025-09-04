@@ -30,18 +30,18 @@ int main() {
     scanf(" %c", &x);  
 
     switch(x) {
-        case 'a':
-        case 'e':
-        case 'i':
-        case 'o':
-        case 'u':
-        case 'A':
-        case 'E':
-        case 'I':
-        case 'O':
-        case 'U':
-            printf("'%c' est une voyelle.\n", x);
-            break;
+        case 'a': printf("'%c' est une voyelle.\n", x); break;
+        case 'e': printf("'%c' est une voyelle.\n", x); break;
+        case 'i': printf("'%c' est une voyelle.\n", x); break;
+        case 'o': printf("'%c' est une voyelle.\n", x); break;
+        case 'u': printf("'%c' est une voyelle.\n", x); break;
+        case 'y': printf("'%c' est une voyelle.\n", x); break;
+        case 'A': printf("'%c' est une voyelle.\n", x); break;
+        case 'E': printf("'%c' est une voyelle.\n", x); break;
+        case 'I': printf("'%c' est une voyelle.\n", x); break;
+        case 'O': printf("'%c' est une voyelle.\n", x); break;
+        case 'U': printf("'%c' est une voyelle.\n", x); break;
+        case 'Y': printf("'%c' est une voyelle.\n", x); break;
         default:
             printf("'%c' n'est pas une voyelle.\n", x);
             break;
@@ -59,10 +59,10 @@ int main() {
 int main() {
     int a, b, s;
 
-    printf("Entrez le premier entier : ");
-    scanf("%d", &a);
-    printf("Entrez le deuxième entier : ");
-    scanf("%d", &b);
+    printf("Entrez le premier valeur : ");
+    scanf("%d",&a);
+    printf("Entrez le deuxième valeur : ");
+    scanf("%d",&b);
 
     if (a == b) {
         s = 3 * (a + b);  
@@ -94,17 +94,17 @@ int main() {
 
 
    
-    delta = b*b - 4*a*c;
+    delta = pow(b ,2) - (4 * a * c);
 
     if(delta < 0){
-        printf("L'équation n'a pas de solution réelle.\n");
+        printf("L'équation n'a pas de solution .\n");
     } else if(delta == 0){
         x1 = -b / (2*a);
-        printf("L'équation a une solution unique : x = %.2f\n", x1);
+        printf("L'équation a une solution  : x = %.2f\n", x1);
     } else {
         x1 = (-b - sqrt(delta)) / (2*a);
         x2 = (-b + sqrt(delta)) / (2*a);
-        printf("L'équation a deux solutions réelles : x1 = %.2f , x2 = %.2f\n", x1, x2);
+        printf("L'équation a deux solution reel : x1 = %.2f , x2 = %.2f\n", x1, x2);
     }
 
     return 0;
@@ -140,20 +140,20 @@ int main() {
 #include <stdio.h>
 
 int main() {
-    float revenu;
+    float rvn;
     int score_credit, duree;
     
     
     printf("Entrez votre revenu annuel : ");
-    scanf("%f", &revenu);
+    scanf("%f", &rvn);
     printf("Entrez votre score de credit (0-1000) : ");
     scanf("%d", &score_credit);
     printf("Entrez la duree du pret (annees) : ");
     scanf("%d", &duree);
     
-    if (revenu >= 30000 && score_credit >= 700 && duree <= 10) {
+    if (rvn >= 30000 && score_credit >= 700 && duree <= 10) {
         printf("Eligibilite : Oui\n");
-    } else if (revenu >= 30000 && score_credit >= 650 && duree <= 15) {
+    } else if (rvn >= 30000 && score_credit >= 650 && duree <= 15) {
         printf("Eligibilite : Oui avec conditions\n");
     } else {
         printf("Eligibilite : Non\n");
@@ -192,7 +192,7 @@ int main() {
         case 1: prime *= 2; break;      
         case 2: prime *= 1.2; break;  
         case 3: prime *= 1.1; break;   
-        default: printf("Type de voiture invalide!\n"); return 1;
+        default: printf("Type de voiture invalide!\n"); break;
     }
 
     
@@ -204,5 +204,6 @@ int main() {
 
     return 0;
 }
+
 
 
