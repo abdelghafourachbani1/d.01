@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main (){
-    int j ,x ,i = 0;
+    int h ,j ,x ,i = 0;
     char livre_chrch[20];
     int nvl_qnt;
     
@@ -78,6 +78,23 @@ int main (){
             if(trouve == 0) printf("Impossible de modifier, le livre n'existe pas.\n");
         break;  
              
+        case 5 :
+             printf("entrer le titre de livre que tu veus suprime : \n");
+             scanf("%s",livre_chrch);
+             
+              for (j = 0;j < i;j++){
+                if (strcmp(livre_chrch,titre_livre[j]) == 0){
+                       for (h = j;h < i;h++) {
+                           strcpy(titre_livre[h],titre_livre[h+1]);
+                           strcpy(auteur_livre[h],auteur_livre[h+1]);
+                           prix_livre[j] = prix_livre[h+1];
+                           quantite_livre[j] = quantite_livre[h+1];
+                }
+                i--;
+                }
+            }
+        break;
+        
         case 6 :
             if (i == 0){
                 printf("La librairie est vide.\n");
