@@ -1,0 +1,140 @@
+Challenge 1 : Fonction de Somme
+
+
+#include <stdio.h>
+
+int somme(int x,int y) {
+    return x+y;
+}
+
+int main() {
+ 
+   int a ,b;
+ 
+   printf("entre les deux nombres : \n");
+   scanf("%d %d",&a,&b);
+   
+   printf("la somme des deux valeurs est : %d",somme(a,b));
+ 
+ return 0;
+}
+
+################################
+Challenge 2 : Fonction de Multiplication
+
+
+#include <stdio.h>
+
+int prd(int x,int y) {
+    return x*y;
+}
+
+int main() {
+ 
+   int a ,b;
+ 
+   printf("entre les deux nombres : \n");
+   scanf("%d %d",&a,&b);
+   
+   printf("le produit des deux valeurs est : %d",prd(a,b));
+ 
+ return 0;
+}
+################################
+Challenge 3 : Fonction de maximun
+
+
+#include <stdio.h>
+
+int max(int x,int y) {
+    int max ;
+    max = x;
+    if(y > max) max = y;
+    return max;
+}
+
+int main() {
+ 
+   int a ,b;
+ 
+   printf("entre les deux nombres : \n");
+   scanf("%d %d",&a,&b);
+   
+   printf("le maximum entre des deux valeurs est : %d",max(a,b));
+ 
+ return 0;
+}
+################################
+Challenge 4 : Fonction de minimum
+
+#include <stdio.h>
+
+int min(int x,int y) {
+    int min ;
+    min = x;
+    if(y < min) min = y;
+    return min;
+}
+
+int main() {
+ 
+   int a ,b;
+ 
+   printf("entre les deux nombres : \n");
+   scanf("%d %d",&a,&b);
+   
+   printf("le minimum entre des deux valeurs est : %d",min(a,b));
+ 
+ return 0;
+}
+################################
+Challenge 5 : Fonction de factoriel
+
+
+#include <stdio.h>
+
+int fct(int x) {
+    int i ,fct=1;
+    for (i = 1;i <= x;i++) {
+        fct *= i;
+    }
+    return fct;
+}
+
+int main() {
+ 
+   int a ;
+ 
+   printf("entre la valeur du nombre : \n");
+   scanf("%d",&a);
+   
+   printf("le factoriel de ce  valeurs est : %d",fct(a));
+ 
+ return 0;
+}
+
+################################
+Challenge 7 : Fonction de verification de parite
+
+
+#include <stdio.h>
+
+void prt(int x) {
+   if (x % 2 == 0) {
+   printf("1");
+   } else {
+     printf("0");  
+   }
+}
+
+int main() {
+ 
+   int a ;
+ 
+   printf("entre la valeur du nombre : \n");
+   scanf("%d",&a);
+   
+   prt(a);
+ 
+ return 0;
+}
