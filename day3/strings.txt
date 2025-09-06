@@ -1,0 +1,177 @@
+Challenge 1 : Affichage d'une Chaîne
+
+#include <stdio.h>
+
+int main () {
+    char name[15];
+    
+    printf("what's your name : \n");
+    scanf("%s",name);
+    
+    printf("your name is : %s",name);
+}
+
+####################################
+Challenge 2 : Longueur de la Chaîne
+
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+   
+   char c1[10];
+   int i ,cnt = 0;
+   
+   printf("entrer le character : ");
+   scanf("%s",c1);
+   
+   for (i = 0;c1[i] != '\0';i++) {
+       cnt++;
+   }
+   
+   printf("le nombre des caracteres est : %d",cnt);
+   
+    return 0;
+} 
+
+####################################
+Challenge 3 : Concaténation de Chaînes
+
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+    char fname[15] ;
+    char sname[15];
+    
+    printf("entrer your first name : ");
+    scanf("%s",fname);
+    printf("entrer your first name : ");
+    scanf("%s",sname);
+    
+    strcat(fname," ");
+    strcat(fname,sname);
+    
+    puts(fname);
+    
+    return 0;
+}
+####################################
+Challenge 4 : Comparaison de Chaînes
+
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+    char fname[15] ;
+    char sname[15];
+    
+    printf("entrer the first name : ");
+    scanf("%s",fname);
+    printf("entrer the second name : ");
+    scanf("%s",sname);
+    
+    
+   if ((strcmp(fname,sname) == 0)) {
+       printf("les deux sont idontique");
+   } else {
+       printf("les deux ne sont pas idontique");
+   }
+    
+   
+    
+    return 0;
+}
+
+####################################
+Challenge 5 : Inversion de Chaîne
+
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+    char x[20] ;
+    
+    printf("entrer votre chaine de caracteres : ");
+    scanf("%s",x);
+    
+    printf("l'inverse est : %s",strrev(x));
+   
+    return 0;
+}
+
+####################################
+Challenge 6 : Compte des Occurrences d'un Caractère
+
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+   
+   char c[20];
+   char ch;
+   int i ,cnt = 0;
+   
+   printf("entrer votre carater : \n");
+      scanf("%s", c);
+    
+   printf("entre la valeur que tu veux cherche : ");
+      scanf("%s",&ch);
+      
+    for (i = 0;i < strlen(c);i++) {
+        if (c[i] == ch) cnt++;
+    }  
+    
+    printf("le nombre d'occurance de '%c' dans le mot est : %d",c,cnt);
+  
+    return 0;
+}
+
+####################################
+Challenge 7 : Conversion en Majuscules
+
+int main() {
+    char text[50];
+
+    printf("Entrer vtre chaine de cracteres : ");
+    scanf("%s", text);
+
+    for (int i = 0; text[i]; i++) {
+        text[i] = toupper(text[i]);
+    }
+
+    printf("Tout en Majuscules : %s\n", text);
+
+    return 0;
+}
+
+####################################
+Challenge 8 : Conversion en Minuscules
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char text[50];
+
+    printf("Entrer vtre chaine de cracteres : ");
+    scanf("%s", text);
+
+    for (int i = 0; text[i]; i++) {
+        text[i] = tolower(text[i]);
+    }
+
+    printf("Tout en minuscule : %s\n", text);
+
+    return 0;
+}
+
+####################################
+Challenge 9 : Suppression des Espaces
+
+
+
+####################################
+Challenge 10 : Trouver un Sous-String
+
