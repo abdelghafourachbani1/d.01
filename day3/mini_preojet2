@@ -5,123 +5,119 @@ typedef struct {
     char name[20];
     char nmr_tel[20];
     char email[30];
-} contact ;
+} contact;
 
 int main() {
     
-    int i ,x ,rp ,cnt = 0 ,j ,k,trv;
+    int i, x, rp, cnt = 0, j, k, trv;
     char cntc_chrch[20];
     char nvl_nmr[20];
     char nvl_eml[30];
     contact contacts[100];
     
     do {
-        
-         printf("########  Menu  ############\n");
-         printf("1 => Ajouter un contact. \n");
-         printf("2 => modifier un contact. \n");
-         printf("3 => suprime un contact.\n");
-         printf("4 => afficher tous les contacts.\n");
-         printf("5 => rechercher un contact.\n");
-         scanf("%d",&x);
+        printf("\n########  Menu  ############\n");
+        printf("1 => Ajouter un contact. \n");
+        printf("2 => Modifier un contact. \n");
+        printf("3 => Supprimer un contact.\n");
+        printf("4 => Afficher tous les contacts.\n");
+        printf("5 => Rechercher un contact.\n");
+        scanf("%d", &x);
          
-    switch (x) {
-        case 1 : 
-                printf("entre le nom : ");
+        switch (x) {
+            case 1: 
+                printf("Entrer le nom : ");
                 scanf(" %[^\n]", contacts[cnt].name);
                 
-                printf("entre votre numero de telephone (only 10 catacteres) : ");
+                printf("Entrer votre numero de telephone (10 caracteres) : ");
                 scanf(" %[^\n]", contacts[cnt].nmr_tel);
                 
-                printf("entre votra adress e-mail : ");
+                printf("Entrer votre adresse e-mail : ");
                 scanf(" %[^\n]", contacts[cnt].email);
                 
                 cnt++;
-                printf("le contact est ajouter en succee. \n");
-                
-            break;
+                printf("Le contact est ajouté avec succès.\n");
+                break;
 
-        case 2 : 
+            case 2: 
                 trv = 0;
-                
-                printf("Entrer le nom de contact que vous cherchez : ");
+                printf("Entrer le nom du contact à modifier : ");
                 scanf(" %[^\n]", cntc_chrch);
                 
-                for (j = 0 ;j < cnt ;j++) {
-                    if ( strcmp(contacts[j].name, cntc_chrch) == 0) {
-                        trv++;
+                for (j = 0; j < cnt; j++) {
+                    if (strcmp(contacts[j].name, cntc_chrch) == 0) {
+                        trv = 1;
+                        printf("Entrer le nouveau numero de telephone (10 caracteres) : ");
+                        scanf(" %[^\n]", nvl_nmr);
                         
-                            printf("entrer la nouvelle numero de tetlephone (only 10 caracter : ");
-                            scanf(" %[^\n]", nvl_nmr);
-                            
-                            printf("entrer la nouvelle adres-email : ");
-                            scanf(" %[^\n]", nvl_eml);
-                            
-                            strcpy(contacts[j].nmr_tel,nvl_nmr);
-                            strcpy(contacts[j].email,nvl_eml);
-                            
-                            printf("le contact est modifier en sucee");
+                        printf("Entrer la nouvelle adresse e-mail : ");
+                        scanf(" %[^\n]", nvl_eml);
+                        
+                        strcpy(contacts[j].nmr_tel, nvl_nmr);
+                        strcpy(contacts[j].email, nvl_eml);
+                        
+                        printf("Le contact est modifié avec succès.\n");
                     }
                 }
                 if (trv == 0) {
-                    printf("le contact n'existe pas.\n");
+                    printf("Le contact n'existe pas.\n");
                 }
-                
-            break;
+                break;
             
-        case 3 : 
+            case 3: 
                 trv = 0;
-                printf("Entrer le nom de contact que vous suprime : ");
-                scanf(" %[^\n]",cntc_chrch);
+                printf("Entrer le nom du contact à supprimer : ");
+                scanf(" %[^\n]", cntc_chrch);
             
-                for (j = 0 ;j < cnt ;j++) {
-                    if ( strcmp(contacts[j].name,cntc_chrch) == 0) {
-                        trv++;
-                            for (i = j;i < cnt;i++) {
-                                contacts[i] = contacts[i+1];
-                            }
-                            cnt--;
-                            printf("le contact est supprime en sucee");
+                for (j = 0; j < cnt; j++) {
+                    if (strcmp(contacts[j].name, cntc_chrch) == 0) {
+                        trv = 1;
+                        for (i = j; i < cnt - 1; i++) {
+                            contacts[i] = contacts[i+1];
+                        }
+                        cnt--;
+                        printf("Le contact est supprimé avec succès.\n");
+                        break;
                     }
                 }
                 if (trv == 0) {
-                    printf("le contact n'existe pas.\n");
-                    trv = 0;
+                    printf("Le contact n'existe pas.\n");
                 }
-            break;
+                break;
 
-        case 4 : 
-            if (cnt != 0) {
-                for (k = 0; k < cnt; k++) {
-                    printf("le contact %d => nom : %s | nmr_tel : %s | adress-email : %s",k+1,contacts[k].name,contacts[k].nmr_tel,contacts[k].email);
+            case 4: 
+                if (cnt != 0) {
+                    for (k = 0; k < cnt; k++) {
+                        printf("Contact %d => Nom : %s | Tel : %s | Email : %s\n", k+1, contacts[k].name, contacts[k].nmr_tel, contacts[k].email);
+                    }
+                } else {
+                    printf("La liste de contacts est vide.\n");
                 }
-            } else {
-                printf("le contact est vide. ");
-            }
+                break;
             
-            break;
-            
-         case 5 : 
+            case 5: 
                 trv = 0;
-                printf("Entrer le nom de contact que vous chercher : ");
-                scanf(" %[^\n]",cntc_chrch);
+                printf("Entrer le nom du contact à rechercher : ");
+                scanf(" %[^\n]", cntc_chrch);
                 
-                for (j = 0 ;j < cnt ;j++) {
-                    if ( strcmp(contacts[j].name,cntc_chrch) == 0) {
-                        trv++;
-                            printf("le contact est trouve dans les contacts");
+                for (j = 0; j < cnt; j++) {
+                    if (strcmp(contacts[j].name, cntc_chrch) == 0) {
+                        trv = 1;
+                        printf("Contact trouvé => Nom : %s | Tel : %s | Email : %s\n", contacts[j].name, contacts[j].nmr_tel, contacts[j].email);
                     }
                 }
                 if (trv == 0) {
-                    printf("le contact n'existe pas dans le contacts.\n");
-                    trv = 0;
+                    printf("Le contact n'existe pas dans la liste.\n");
                 }
-            break;
-        
-        
-        printf("show menu print 1 , if you don't print 0. \n");
-        scanf("%d",&rp);
-        
+                break;
+
+            default:
+                printf("Choix invalide.\n");
+        }
+
+        printf("\nAfficher le menu ? (1=Oui / 0=Non) : ");
+        scanf("%d", &rp);
+
     } while (rp == 1);
 
     return 0;
