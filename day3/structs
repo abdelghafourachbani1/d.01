@@ -1,1 +1,99 @@
+Challenge 1 : Définition et Utilisation de Structure
 
+#include <stdio.h>
+
+typedef struct {
+   char nom[20];
+   char prenom[20];
+   int age;
+} cd ;
+
+int main () {
+    
+        cd p1;
+
+        printf("entrer votre nom de : ");
+        scanf(" %[^\n]",&p1.nom);
+        printf("entrer votre prenom de : ");
+        scanf(" %[^\n]",&p1.prenom);
+        printf("entrer votre age de : ");
+        scanf(" %d",&p1.age);
+        
+        printf("nom : %s \n",p1.nom);
+        printf("prenom : %s \n",p1.prenom);
+        printf("age : %d \n",p1.age);
+        
+    return 0;
+}
+
+###################################################
+Challenge 2 : Structure avec Tableau
+
+#include <stdio.h>
+
+typedef struct {
+   char nom[20];
+   char prenom[20];
+   int notes[3];
+} cd ;
+
+int main () {
+    
+        cd p;
+        int i,s=0;
+        float m;
+
+        printf("entrer votre nom de : ");
+        scanf(" %[^\n]",&p1.nom);
+        printf("entrer votre prenom de : ");
+        scanf(" %[^\n]",&p1.prenom);
+        for (i=0;i<3;i++) {
+            printf("entrer la note %d du etudiuant : ",i+1,p1.notes[i]);
+            scanf("%d",&p1.notes[i]);
+            s += p1.notes[i];
+        }
+        
+        m= s/3;
+        
+        printf("nom : %s \n",p1.nom);
+        printf("prenom : %s \n",p1.prenom);
+         for (i=0;i<3;i++) {
+            printf("la note %d d'etudiant: %d \n",i+1,p1.notes[i]);
+        }
+        printf("la moyenne des notes est : %.2f \n",m);
+        
+    return 0;
+}
+
+###################################################
+Challenge 3 : Passage de Structure en Argument
+
+#include <stdio.h>
+
+typedef struct {
+   float longueur;
+   float largueur;
+} rectangle ;
+
+   void air(rectangle r1f) {
+       printf("l'air d'un rectangle : %.2f",r1f.longueur*r1f.largueur);
+   }
+
+int main () {
+    
+   rectangle r1;
+   
+   printf("entre la longeur du triangle : ");
+   scanf("%f",&r1.longueur);
+   printf("entre la largeur du triangle : ");
+   scanf("%f",&r1.largueur);
+   
+   air(r1);
+    
+    return 0;
+}
+
+###################################################
+Challenge 4 : Structure et Fonction de Retour
+
+###################################################
