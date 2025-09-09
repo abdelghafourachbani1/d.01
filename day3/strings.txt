@@ -6,7 +6,7 @@ int main () {
     char name[15];
     
     printf("what's your name : \n");
-    scanf("%s",name);
+    scanf(" %[^\n]",name);
     
     printf("your name is : %s",name);
 }
@@ -175,3 +175,28 @@ Challenge 9 : Suppression des Espaces
 ####################################
 Challenge 10 : Trouver un Sous-String
 
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+    
+    char src[20];
+    char srch[20];
+    char *rtr;
+    
+    printf("entre le mot  : ");
+    scanf(" %[^\n]", &src);
+    
+    printf("entre le sous-string : ");
+    scanf("%s", &srch);
+    
+    rtr = strstr(src,srch);
+    
+    if (rtr != NULL) {
+        printf("le sous-string est exxist dans le mot");
+    } else {
+        printf("le sous-string n'exist pas dans le mot");
+    }
+    
+    return 0;
+}
