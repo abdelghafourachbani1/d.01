@@ -96,25 +96,6 @@ int main () {
 ###################################################
 Challenge 4 : Structure et Fonction de Retour
 
-// Online C compiler to run C program online
-#include <stdio.h>
 
-typedef struct {
-    char titre[100];
-    char auteur[100];
-    int annee;
-}livre;
-
-livre fct() {
-    livre l1 = {"kk","jjj",23};
-    return l1;
-}
-
-int main() {
-    livre l1 = fct();
-    printf("titre = %s || auteur = %s || annee = %d",l1.titre,l1.auteur,l1.annee);
-
-    return 0;
-}
 
 ###################################################
