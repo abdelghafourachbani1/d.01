@@ -130,17 +130,18 @@ int main () {
 ####################################
 Challenge 7 : Conversion en Majuscules
 
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
 int main() {
-    char text[50];
-
-    printf("Entrer vtre chaine de cracteres : ");
-    scanf("%s", text);
-
-    for (int i = 0; text[i]; i++) {
-        text[i] = toupper(text[i]);
-    }
-
-    printf("Tout en Majuscules : %s\n", text);
+  
+  char mot[] = "hello";
+  int i;
+  
+  for(i = 0;i < strlen(mot);i++){
+      printf("%c",mot[i]-32);
+  }
 
     return 0;
 }
@@ -148,21 +149,18 @@ int main() {
 ####################################
 Challenge 8 : Conversion en Minuscules
 
+// Online C compiler to run C program online
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 
 int main() {
-    char text[50];
-
-    printf("Entrer vtre chaine de cracteres : ");
-    scanf("%s", text);
-
-    for (int i = 0; text[i]; i++) {
-        text[i] = tolower(text[i]);
-    }
-
-    printf("Tout en minuscule : %s\n", text);
+  
+  char mot[] = "HELL0";
+  int i;
+  
+  for(i = 0;i < strlen(mot);i++){
+      printf("%c",mot[i]+32);
+  }
 
     return 0;
 }
@@ -200,3 +198,4 @@ int main () {
     
     return 0;
 }
+
